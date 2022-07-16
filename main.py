@@ -157,7 +157,7 @@ if __name__ == "__main__":
     y_train, y_test = Y[idx[: split_point]], Y[idx[split_point: ]]
     print()
     print(f"train sample: {len(x_train)}, x_train shape: {x_train.shape}, y_train shape: {y_train.shape}")
-    print(f"test  sample: {len(x_train)}, x_test  shape: {x_test.shape }, y_test  shape: {y_test.shape}")
+    print(f"test  sample: {len(x_test)}, x_test  shape: {x_test.shape }, y_test  shape: {y_test.shape}")
     
     ds_train = create_dataset(zip(x_train, y_train), batch_size=batch_size, repeat_size=repeat_size)
     ds_test = create_dataset(zip(x_test, y_test), batch_size=batch_size, repeat_size=repeat_size)
